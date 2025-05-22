@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jocam Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img onclick="home()" src="Jocam.png" alt="Jocam">
+        <h1 id="offer-calculator">OFFER CALCULATOR (DDP)</h1>
+    </div>
+    <div id="paired">
+        <button onclick="exw()" id="exw" class="head">EXW</button>
+        <button id="ddp" class="head">DDP</button>
+    </div>
+    <div class="c-price display">
+        <div>
+            <h3 class="text1">CURRENCY</h3>
+            <select class="curr-p set" name="currency" id="currency">
+                <option value="">Currency</option>
+                <option value="NGN">Nigerian Naira (NGN)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="EUR">Euro (EUR)</option>
+            </select>
+        </div>
+        <div>
+            <h3 class="text1 text2">EXCHANGE RATE</h3>
+            <input id="ddp-exchange" class="curr-p set update" type="number" name="rate" placeholder="Exchange Rate">
+        </div>
+    </div>
+
+
+    <div class="rate-equip display">
+        <div>
+            <h3 class="text1">PRICE</h3>
+            <input class="equip-rate set rate update" id="price" type="number" name="price" placeholder="Price">
+        </div>
+        <div>
+            <h3 class="text1 text2">NAIRA EQUIVALENT</h3>
+            <input class="equip-rate set" id="naira-equivalent" type="number" name="equivalent" placeholder="Naira Equivalent">
+        </div>
+    </div>
+
+    <div class="display">
+        <div>
+            <h3 class="text1">VAT(%)</h3>
+            <input class="vat-naira set" id="vat" type="number" placeholder="VAT" name="vat">
+        </div>
+        <div>
+            <h3 class="text1 text2">VAT(NAIRA)</h3>
+            <input class="vat-naira set" id="vat-naira" type="number" placeholder="Vat(Naira)" name="vandp">
+        </div>
+    </div>
+
+    
+    <div class="deliver-total">
+        <h3 class="local-total">TOTAL COST OF ITEM</h3>
+        <input class="delivery-total set" id="cost-plus-vat" type="number" placeholder="Total Cost of Item" name="delivery">
+    </div>
+
+
+    <div class="deliver-total">
+        <h3 class="local-total">LOCAL DELIVERY</h3>
+        <input class="delivery-total set" id="local-delivery" type="number" placeholder="Local Delivery" name="delivery">
+    </div>
+
+
+    <div class="deliver-total">
+        <h3 class="local-total">SUB TOTAL</h3>
+        <input class="delivery-total set" id="sub-total" type="number" placeholder="Sub Total">
+    </div>
+
+
+    <div class="display">
+        <div>
+            <h3 class="text1">MARKUP(%)</h3>
+            <input class="markup set mark" id="markup" type="number" placeholder="Markup" name="mark">
+        </div>
+        <div>
+            <h3 class="text1 text2">MARKUP(NAIRA)</h3>
+            <input class="markup set" id="markup-naira" type="number" placeholder="Markup(Naira)" name="markup">
+        </div>
+    </div>
+
+
+    <div class="deliver-total">
+        <h3 class="local-total">TOTAL OFFER</h3>
+        <input class="delivery-total set" id="total-offer" type="number" placeholder="Total Offer" name="total">
+    </div>
+
+
+    <div class="question">
+        <span class="span">Would you like to divide the total price by a given quantity?</span>
+        <button class="ddp-q-button">Yes</button>
+    </div>
+
+
+    <div id="ddp-question" class="rate-equip display no-display">
+        <div>
+            <h3 class="text1">QUANTITY</h3>
+            <input class="equip-rate set rate" id="quantity" type="number" name="rate" placeholder="Quantity">
+        </div>
+        <div>
+            <h3 class="text1 text2">UNIT PRICE</h3>
+            <input class="equip-rate set" id="unit-price" type="number" name="equivalent" placeholder="Unit Price">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
