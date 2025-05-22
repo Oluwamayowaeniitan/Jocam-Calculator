@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jocam Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img onclick="home()" src="Jocam.png" alt="Jocam">
+        <h1 id="offer-calculator">OFFER CALCULATOR (EXW)</h1>
+    </div>
+    <div id="paired">
+        <button id="exw-exw" class="head">EXW</button>
+        <button onclick="ddp()" id="exw-ddp" class="head">DDP</button>
+    </div>
+    <div class="c-price display">
+        <div>
+            <h3 class="text1">CURRENCY</h3>
+            <select class="curr-p set" name="currency" id="currency">
+                <option value="">Currency</option>
+                <option value="NGN">Nigerian Naira (NGN)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="EUR">Euro (EUR)</option>
+            </select>
+        </div>
+        <div>
+            <h3 class="text1 text2">EXCHANGE RATE</h3>
+            <input class="curr-p set" id="exw-exchange" type="number" name="rate" placeholder="Exchange Rate">
+        </div>
+    </div>
+
+
+    <div class="rate-equip display">
+        <div>
+            <h3 class="text1">PRICE</h3>
+            <input class="equip-rate set rate" id="price" type="number" name="price" placeholder="Price">
+        </div>
+        <div>
+            <h3 class="text1 text2">NAIRA EQUIVALENT</h3>
+            <input class="equip-rate set" id="naira-equivalent" type="number" name="equivalent" placeholder="Naira Equivalent">
+        </div>
+    </div>
+
+
+    <div class="rate-equip display">
+        <div>
+            <h3 class="text1">WEIGHT</h3>
+            <input class="equip-rate set rate" id="weight" type="number" name="rate" placeholder="Weight">
+        </div>
+        <div>
+            <h3 class="text1 text2">VENDOR'S LOCATION</h3>
+            <input class="equip-rate set" id="location" type="text" name="equivalent" placeholder="Vendor's Location">
+        </div>
+    </div>
+
+
+    <div id="paired" class="weight">
+        <button id="ude" class="head dhl-ff">USE DHL ESTIMATE</button>
+        <button id="uff" class="head dhl-ff">USE FREIGHT FORWARDER</button>
+    </div>
+
+
+    <div class="no-display" id="ude-no-display">
+        <div class="rate-equip display">
+            <div>
+                <h3 class="text1">DHL PRICE</h3>
+                <input class="equip-rate set rate" id="dhl-price" type="number" name="rate" placeholder="DHL Price">
+            </div>
+            <div>
+                <h3 class="text1 text2">TOTAL FREIGHT</h3>
+                <input class="equip-rate set" id="total-freight" type="number" name="equivalent" placeholder="Total Freight">
+            </div>
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">DDU</h3>
+            <input class="delivery-total set" id="ddu" type="number" placeholder="Delivery Duty Unpaid">
+        </div>
+
+
+        <div class="deliver-total">
+            <h3 class="local-total">DUTY</h3>
+            <input class="delivery-total set" id="duty" type="number" placeholder="Calculated Duty" name="delivery">
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">LOCAL DELIVERY</h3>
+            <input class="delivery-total set" id="local-delivery" type="number" placeholder="Local Delivery" name="delivery">
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">SUB TOTAL</h3>
+            <input class="delivery-total set" id="sub-total" type="number" placeholder="Sub Total" name="delivery">
+        </div>
+    
+    
+        <div class="display">
+            <div>
+                <h3 class="text1">MARKUP(%)</h3>
+                <input class="markup set mark" id="markup" type="number" placeholder="Markup" name="mark">
+            </div>
+            <div>
+                <h3 class="text1 text2">MARKUP(NAIRA)</h3>
+                <input class="markup set" id="markup-naira" type="number" placeholder="Markup(Naira)" name="markup">
+            </div>
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">TOTAL</h3>
+            <input class="delivery-total set" id="total" type="number" placeholder="Total" name="total">
+        </div>
+    
+    
+        <div class="rate-equip display">
+            <div>
+                <h3 class="text1" id="transfer-text">TRANSFER CHARGE</h3>
+                <input class="equip-rate set rate" id="transfer-charge" type="number" name="rate" placeholder="Transfer Charge">
+            </div>
+            <div>
+                <h3 class="text1 text2">TRANSFER CHARGE(NAIRA)</h3>
+                <input class="equip-rate set" id="transfer-charge-naira" type="number" name="equivalent" placeholder="Transfer Charge in Naira">
+            </div>
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">GRAND TOTAL</h3>
+            <input class="delivery-total set" id="grand-total" type="number" placeholder="Grand Total" name="total">
+        </div>
+
+
+        <div class="question">
+            <span class="span">Would you like to divide the total price by a given quantity?</span>
+            <button class="ude-q-button">Yes</button>
+        </div>
+
+
+        <div id="ude-question" class="rate-equip display no-display">
+            <div>
+                <h3 class="text1">QUANTITY</h3>
+                <input class="equip-rate set rate" id="quantity" type="number" name="rate" placeholder="Quantity">
+            </div>
+            <div>
+                <h3 class="text1 text2">UNIT PRICE</h3>
+                <input class="equip-rate set" id="unit-price" type="number" name="equivalent" placeholder="Unit Price">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="no-display" id="uff-no-display">
+        <div class="deliver-total">
+            <h3 class="local-total">DOOR 2 DOOR ESTIMATE</h3>
+            <input class="delivery-total set" id="dd" type="number" placeholder="D2D Estimate" name="dd">
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">LOCAL DELIVERY</h3>
+            <input class="delivery-total set" id="uff-local-delivery" type="number" placeholder="Local Delivery" name="delivery">
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">SUB TOTAL</h3>
+            <input class="delivery-total set" id="uff-subtotal" type="number" placeholder="Sub Total" name="delivery">
+        </div>
+    
+    
+        <div class="display">
+            <div>
+                <h3 class="text1">MARKUP(%)</h3>
+                <input class="markup set mark" id="uff-markup" type="number" placeholder="Markup" name="mark">
+            </div>
+            <div>
+                <h3 class="text1 text2">MARKUP(NAIRA)</h3>
+                <input class="markup set" id="uff-markup-naira" type="number" placeholder="Markup(Naira)" name="markup">
+            </div>
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">TOTAL</h3>
+            <input class="delivery-total set" id="uff-total" type="number" placeholder="Total" name="total">
+        </div>
+    
+    
+        <div class="rate-equip display">
+            <div>
+                <h3 class="text1" id="uff-transfer-text">TRANSFER CHARGE</h3>
+                <input class="equip-rate set rate" id="uff-transfer-charge" type="number" name="rate" placeholder="Transfer Charge">
+            </div>
+            <div>
+                <h3 class="text1 text2">TRANSFER CHARGE (NAIRA)</h3>
+                <input class="equip-rate set" id="uff-transfer-charge-naira" type="number" name="equivalent" placeholder="Naira Equivalent">
+            </div>
+        </div>
+    
+    
+        <div class="deliver-total">
+            <h3 class="local-total">GRAND TOTAL</h3>
+            <input class="delivery-total set" id="uff-grand-total" type="number" placeholder="Grand Total" name="total">
+        </div>
+
+        <div class="question">
+            <span class="span">Would you like to divide the total price by a given quantity?</span>
+            <button class="uff-q-button">Yes</button>
+        </div>
+
+
+        <div id="uff-question" class="rate-equip display no-display">
+            <div>
+                <h3 class="text1">QUANTITY</h3>
+                <input class="equip-rate set rate" id="uff-quantity" type="number" name="rate" placeholder="Quantity">
+            </div>
+            <div>
+                <h3 class="text1 text2">UNIT PRICE</h3>
+                <input class="equip-rate set" id="uff-unit-price" type="number" name="equivalent" placeholder="Unit Price">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="exw.js"></script>
+</body>
+</html>
