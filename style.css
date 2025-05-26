@@ -30,6 +30,11 @@ body{
     margin-left: 30px;
     display: inline-flex;
 }
+.home-paired{
+    margin-top: 150px;
+    height: 50px;
+    font-size: 25px;
+}
 .head:hover{
     background-color: white;
     color: rgb(4, 4, 85);

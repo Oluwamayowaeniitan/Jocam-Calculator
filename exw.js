@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const exwExchange= document.querySelector("#exw-exchange");
     const price = document.querySelector("#price");
     const nairaEquivalent = document.querySelector("#naira-equivalent");
-    const location = document.querySelector("#location");
+    //const location = document.querySelector("#location");
     const weight = document.querySelector("#weight");
     const dhlPrice = document.querySelector("#dhl-price");
     const totalFreight = document.querySelector("#total-freight");
@@ -361,6 +361,15 @@ document.addEventListener("DOMContentLoaded", function(){
         uffUnit();
     });
 
+    price.addEventListener("input", function(){
+        calculateNairaEquivalent();
+        uffsubTotalCalculator();
+        uffMarkupCalculator();
+        uffTotalCalculator();
+        uffTransferChargeCalculator();
+        uffGrandTotalCalculate();
+        uffUnit();
+    });
     dd.addEventListener("input", function(){
         calculateNairaEquivalent();
         uffsubTotalCalculator();
